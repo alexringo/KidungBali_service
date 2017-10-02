@@ -28,7 +28,8 @@ function index_get()
 				$this->db->where('judul_id', $judul_id);
 				$materi=$this->db->get('view_materi')->result_array();
 		}
-				$this->response($materi,200);
+				$json = $this->response($materi,200);
+				
 	}
 
 function index_post()
