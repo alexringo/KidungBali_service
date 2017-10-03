@@ -25,7 +25,7 @@ function index_get()
 		}
 		else
 		{
-				$this->db->order_by('nama_jenis','ASC')
+				$this->db->order_by('nama_jenis','ASC');
 				$this->db->where('jenis_id', $jenis_id);
 				$jenis_id=$this->db->get('jenis_materi')->result_array();
 		}
