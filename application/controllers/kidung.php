@@ -25,6 +25,7 @@ function index_get()
 		}
 		else
 		{
+				$this->db->order_by('nama_jenis','ASC')
 				$this->db->where('judul_id', $judul_id);
 				$materi=$this->db->get('view_materi')->result_array();
 		}

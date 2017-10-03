@@ -20,10 +20,12 @@ function index_get()
 		$jenis_id = $this->get('jenis_id');
 		if($jenis_id=='')	
 		{
+						  
 				$jenis_id=$this->db->get('jenis_materi')->result_array();
 		}
 		else
 		{
+				$this->db->order_by('nama_jenis','ASC')
 				$this->db->where('jenis_id', $jenis_id);
 				$jenis_id=$this->db->get('jenis_materi')->result_array();
 		}
